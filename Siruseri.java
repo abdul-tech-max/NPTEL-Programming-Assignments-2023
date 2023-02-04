@@ -44,7 +44,7 @@ public class Siruseri {
             result[ind]=res_ans;
         }
 
-        System.out.println(Arrays.toString(result));
+        //System.out.println(Arrays.toString(result));
         //System.out.println(lower);
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i]+" ");
