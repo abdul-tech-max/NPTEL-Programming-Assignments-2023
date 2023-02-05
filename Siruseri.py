@@ -36,4 +36,4 @@ for z in s:
 
 print("\n", end ="")
   
-//This Code was Contributed by Arssam Basha
+#This Code was Contributed by Arssam Basha
