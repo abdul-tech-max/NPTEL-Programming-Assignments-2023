@@ -1,6 +1,5 @@
 package com.abu.NPTEL;
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -31,8 +30,9 @@ public class Siruseri {
         Collections.sort(copy_lower);
         Collections.sort(copy_upper);
         //ArrayList<Integer> result=new ArrayList<>();
-        int[] result=new int[n];
-        for (int i = 0; i < result.length; i++) {
+        int[] result1=new int[n];
+        int[] result2=new int[n];
+        for (int i = 0; i < result1.length; i++) {
             int res_ans=0;
             for (int j = i+1; j < n; j++) {
                 if (copy_lower.get(i)<copy_lower.get(j)){
@@ -41,13 +41,37 @@ public class Siruseri {
 
             }
             int ind=lower.indexOf(copy_lower.get(i));
-            result[ind]=res_ans;
+            result1[ind]=res_ans;
+        }
+        for (int i = result2.length-1; i >-1; i--) {
+            int res_ans=0;
+            for(int j=0;j<n;j++){
+                if(copy_upper.get(i)>copy_upper.get(j)){
+                    res_ans+=2;
+                }
+            }
+            int ind=upper.indexOf(copy_upper.get(i));
+            result2[ind]=res_ans;
         }
 
         //System.out.println(Arrays.toString(result));
         //System.out.println(lower);
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i]+" ");
+        boolean isequal=true;
+        if(result1.length==result2.length){
+            for (int i=0;i<result1.length;i++){
+                if(result1[i]!=result2[i]){
+                    isequal=false;
+                    break;
+                }
+            }
+        }
+        else {
+            isequal=false;
+        }
+        if(isequal){
+            for (int i = 0; i < result1.length; i++) {
+                System.out.print(result2[i]+" ");
+            }
         }
     }
 }
