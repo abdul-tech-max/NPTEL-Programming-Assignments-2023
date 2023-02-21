@@ -17,7 +17,7 @@ class Graph
 
 int V;
 
-list < pair <int, int >>"adj; vector< Edge > edge;
+list < pair <int, int >>*adj; vector< Edge > edge;
 
 public:
 
