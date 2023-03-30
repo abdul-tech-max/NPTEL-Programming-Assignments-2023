@@ -84,3 +84,5 @@ void printarray(int array[], int n)
 }
 
 
+// this only for reference 
+
